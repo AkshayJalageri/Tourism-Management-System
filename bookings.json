@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Akshay Jalageri",
+        "age": 21,
+        "gender": "M",
+        "destination": "tokyo",
+        "hotel": "adsad",
+        "flight": "asfs",
+        "cost": 41,
+        "checkin": "2025-05-07",
+        "checkout": "2025-05-09"
+    }
+]

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Book Your Travel</h1>
+    <form method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Age:</label>
+        <input type="number" name="age" required>
+
+        <label>Gender:</label>
+        <select name="gender" required>
+            <option value="">Select</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+
+        <label>Destination:</label>
+        <select name="destination" required>
+            <option value="">Choose...</option>
+            <option>Italy</option>
+            <option>France</option>
+            <option>London</option>
+            <option>Sydney</option>
+            <option>New York</option>
+            <option>Tokyo</option>
+            <option>Shimla</option>
+        </select>
+
+        <label>Flight:</label>
+        <select name="flight" required>
+            <option value="">Choose...</option>
+            <option>Lufthansa (6 AM - ₹68,000)</option>
+            <option>Jet Airways (9 AM - ₹40,000)</option>
+            <option>Qatar Airways (1 PM - ₹55,000)</option>
+            <option>Emirates (5 PM - ₹75,000)</option>
+            <option>Air Asia (9 PM - ₹42,000)</option>
+        </select>
+
+        <label>Hotel:</label>
+        <select name="hotel" required>
+            <option value="">Choose...</option>
+            <option>Emirates Palace (₹20,000/day)</option>
+            <option>Burj Al Arab (₹19,500/day)</option>
+            <option>Town House Galleria (₹17,000/day)</option>
+            <option>Royal Malwane (₹20,500/day)</option>
+            <option>Amanzoe (₹18,000/day)</option>
+        </select>
+
+        <label>Days of Stay:</label>
+        <input type="number" name="days" required>
+
+        <button type="submit">Book Now</button>
+    </form>
+
+    {% if result %}
+    <h2>Booking Details:</h2>
+    <ul>
+        <li><strong>Name:</strong> {{ result.name }}</li>
+        <li><strong>Age:</strong> {{ result.age }}</li>
+        <li><strong>Gender:</strong> {{ result.gender }}</li>
+        <li><strong>Destination:</strong> {{ result.destination }}</li>
+        <li><strong>Flight:</strong> {{ result.flight }}</li>
+        <li><strong>Hotel:</strong> {{ result.hotel }}</li>
+        <li><strong>Stay (days):</strong> {{ result.days }}</li>
+    </ul>
+    {% endif %}
+</body>
+</html>
